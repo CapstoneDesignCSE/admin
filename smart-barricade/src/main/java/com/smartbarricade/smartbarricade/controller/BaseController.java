@@ -10,7 +10,6 @@ public class BaseController {
 
     @GetMapping(value = "/index")
     public String indexPage() {
-        return "/view/index";
+        return "/index";
     }
-
 }
