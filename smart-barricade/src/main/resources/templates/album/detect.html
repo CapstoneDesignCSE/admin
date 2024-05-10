@@ -188,10 +188,10 @@
                     <th>차량 정보</th>
                     <th>위험성</th>
                 </tr>
-                <tr th:classappend="${data.danger} ? 'table-danger' : 'table-info'" th:each="data : ${kafkaData}">
-                    <td th:text="${data.index}"></td>
-                    <td th:text="${data.message}"></td>
-                    <td th:text="${data.danger} ? '위험' : '정상'"></td>
+                <tr th:classappend="${data. value.danger} ? 'table-danger' : 'table-info'" th:each="data : ${kafkaData}">
+                    <td th:text="${data.value.getId()}"></td>
+                    <td th:text="${data.value.message}"></td>
+                    <td th:text="${data.value.danger} ? '위험' : '정상'"></td>
                 </tr>
             </table>
 

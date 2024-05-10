@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/album")
@@ -20,7 +21,6 @@ public class AlbumController {
     /**
      * Form Controller
      */
-
     @GetMapping
     public String getAlbum() {
         return "album/index";
@@ -29,11 +29,12 @@ public class AlbumController {
     @GetMapping("/detect")
     public String getDetectData(Model model) {
 
-        List<AlbumModel> cachedAlbumDataFromKafka = albumService.getCachedAlbumDataFromKafka();
+        Map<String, AlbumModel> cachedAlbumDataFromKafka = albumService.getCachedAlbumDataFromKafka();
         model.addAttribute("kafkaData", cachedAlbumDataFromKafka);
 
         return "album/detect";
     }
+
 
 
     /**

@@ -50,7 +50,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	implementation 'org.springframework.session:spring-session-jdbc'
+//	implementation 'org.springframework.session:spring-session-jdbc'
 
 	// tests
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

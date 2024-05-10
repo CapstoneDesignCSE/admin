@@ -10,20 +10,24 @@ import lombok.NoArgsConstructor;
 import lombok.Value;
 import org.springframework.boot.context.properties.bind.DefaultValue;
 
+import static jakarta.persistence.GenerationType.SEQUENCE;
+
 @Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 public class AlbumModel {
 
-    //TODO: 추후 메시지 내 데이터 역할 구분하여 모델 작성 할 것.
-    private Integer index;
-
     @Id
-    @GeneratedValue
-    private String id;
+    @Column(name="id")
+    private Long id;
 
+    @Column(name="speed")
     private Integer speed;
+
+    @Column(name="is_danger")
     private Boolean danger;
+
+    @Column(name="message")
     private String message;
 }
